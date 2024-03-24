@@ -1,4 +1,4 @@
-!pip install -q hub
+
 import os
 import numpy as np
 import pandas as pd
@@ -230,3 +230,5 @@ test_accuracies.append(test_accuracy)
 
 print(f'Test Loss: {test_losses[-1]:.4f}, Test Accuracy: {test_accuracies[-1]:.2f}%')
 
+
+print(all_data.tail())
