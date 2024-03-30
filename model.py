@@ -192,6 +192,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.title('Training Loss Over Epochs')
 plt.legend()
+plt.savefig('train_loss_plot_SimpleCNN.png')
 
 # Plot training accuracy
 plt.subplot(1, 2, 2)
@@ -200,8 +201,8 @@ plt.xlabel('Epochs')
 plt.ylabel('Accuracy (%)')
 plt.title('Training Accuracy Over Epochs')
 plt.legend()
+plt.savefig('train_accuracy_plot_SimpleCNN.png')
 
-plt.show()
 torch.save(model.state_dict(), 'simple_cnn_model.pth')
 
 # test 
@@ -229,6 +230,3 @@ test_accuracy = 100 * correct / total  # Calculate test accuracy
 test_accuracies.append(test_accuracy)
 
 print(f'Test Loss: {test_losses[-1]:.4f}, Test Accuracy: {test_accuracies[-1]:.2f}%')
-
-
-print(all_data.tail())
